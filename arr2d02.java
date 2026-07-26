@@ -14,9 +14,17 @@ public class arr2d02 {
         for (int[] numBox:matrix){
             System.out.println(Arrays.toString(numBox));
         }
-        
+
+        System.out.println(isTriangularMatrix(matrix));
     }
     static boolean isTriangularMatrix(int[][] a) {
-
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a[i].length; j++) {
+                if (a[i][j] != 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
